@@ -1,0 +1,14 @@
+
+The format for this file is -> Command Description : SQL command\
+
+- Create Database : CREATE DATABASE StudentResultSystem;
+- Use Database : USE StudentResultSystem;
+- Create student table : CREATE TABLE student(name VARCHAR(100), rollNo VARCHAR(10) PRIMARY KEY, gender VARCHAR(6), fathername VARCHAR(40), courseName VARCHAR(10), branchName VARCHAR(20));
+- Look at the description of student table : DESC student;
+- Insert a row in student table : INSERT INTO student VALUES('Sam', '1', 'Male', 'fdfs', 'BTech', 'Civil'); 
+- List the student table : SELECT * FROM student;
+- Create result table : CREATE TABLE result(rollNo VARCHAR(10) PRIMARY KEY, physics INT, maths INT, chem INT, electrical INT, bio INT, result INT);
+- Look at the description of result table : DESC result;
+- Update a row in result table : UPDATE result SET physics = 10, maths = 20, chem = 30, electrical = 40, bio=50, result = 150 WHERE rollNo='1';
+- List the result table : SELECT * FROM result;
+- Inner Join student and result table based on roll No. Column : SELECT * FROM student INNER JOIN result WHERE student.rollNo=result.rollNo;
